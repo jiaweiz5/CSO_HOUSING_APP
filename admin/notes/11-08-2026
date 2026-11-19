@@ -1,0 +1,54 @@
+CSO Housing App — Follow-Up Notes
+1. Authentication and Spam Prevention
+Option 1: SMS Verification
+- Require the user to enter a phone number on every form.
+- Phone number entry is mandatory; users cannot submit the form without it.
+- Use SMS verification to help prevent spam submissions from the same device or person.
+- Twilio may cost approximately $40–$50 per month.
+- Confirm whether the project budget supports this cost and whether the university is willing to pay.
+Option 2: Email Verification with Supabase Auth and Resend
+- Supabase Auth generates and verifies a code, then issues a verified session.
+- Resend delivers the email containing the verification code.
+- The backend checks the verified session and submission limits before accepting a lockout request.
+Logic to Implement
+- Allow only one active lockout request per email address.
+- Limit new requests from the same email address per hour.
+- Prevent cancellation from resetting the request limit.
+- Allow requests to be cancelled or resolved according to their status.
+Authentication Decision
+The team decided to use Supabase Auth with Resend instead of SMS verification. This option was chosen to avoid SMS costs while still verifying user identity and helping prevent spam in the user-facing application.
+2. Feedback and Communication
+- The CSO will manually call the person back if there are issues with the request.
+3. Database and Reporting Approach
+- Potential architecture: PostgreSQL through Supabase → Google Sheet.
+- UCSD or the project supervisor should be able to view the information and metrics collected by CSOs.
+- UCSD has access to the Google Form that CSOs currently use to log requests.
+4. Admin Version
+- Provide a separate admin version for CSOs.
+- Admin login credentials may be taken from the CSO app or CSO-maintained access list.
+- Email verification is not required for admins when filling out or managing forms.
+- Admin users should have expanded permissions to review, update, resolve, and manage requests.
+5. Scope and Long-Term Direction
+- Focus initially on students and eventually expand to every housing area.
+- Build a Google Form-based web app as an initial or parallel approach.
+- Continue developing a standalone application with its own form system for long-term use.
+- The long-term goal is a dedicated mobile application.
+- Support UCSD students, with possible subsections for sublessees, family members, and other authorized individuals.
+- Eventually process signatures and receipts fully through the application.
+- Allow users to cancel a form or service request through the application.
+- The $25 service fee is charged directly by Housing; the development team provides the service and does not handle the money.
+6. Form Information
+Potential information to collect:
+- Date.
+- Time.
+- Name.
+- Housing location.
+- PID or TSN.
+- Phone number.
+The form may not need to collect an email address if the user has already been verified through the authentication system.
+7. Project Logs
+- Friday, November 6 and Sunday, November 8: 3.5 hours.
+- Thursday, November 12: 1.5 hours.
+8. Stakeholder Expectations
+- The university would like the team to prepare the proposed system and explain its design, capabilities, costs, and implementation decisions.
+- Be prepared to answer questions about authentication, data storage, verification, access control, reporting, and long-term mobile app development.
