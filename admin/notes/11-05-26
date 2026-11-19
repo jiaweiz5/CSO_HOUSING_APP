@@ -1,0 +1,69 @@
+CSO Housing App — Meeting Notes
+1. CSO Housing App
+Objective
+Create a housing app that allows graduate students to submit 11-54 requests directly to the CSO Graduate Housing Office instead of calling the CSO phone line while CSOs record information by hand.
+Current Process
+- CSOs sit in the office and record discrepancy information by hand.
+- There is no digital way to track information or generate statistics from 11-54 requests.
+- Communication occurs only by phone.
+- Students do not receive live updates about their request or place in line.
+Proposed Process
+- Students and their families, roommates, authorized individuals, or sublessees can access the appropriate app portal and submit 11-54 requests.
+- CSOs use the Mercury platform to verify residency using information such as the user’s full name and student ID.
+- CSOs call a separate phone number to verify the credentials of users who cannot be verified through Mercury, such as family members or sublessees.
+Access and Authentication
+- Authentication is required for users.
+- The system should support different authorization levels:
+  - Users: Create, view, edit, and delete their own requests or reservations.
+  - CSO administrators: Full create, read, update, and delete access to all requests and records.
+- The system should support verification for students as well as family members, authorized individuals, roommates, and sublessees.
+Queue and Status Features
+- Display a live waiting queue.
+- Show how many callouts are ahead of each request.
+- Provide real-time updates on a user’s position in line.
+- Provide an estimated wait time.
+- Notify CSOs when new people enter the queue.
+- Allow users to view the current status of their request.
+2. Schedule and Sign-In Form Community Monitor
+- Research an inexpensive computer or touchscreen wall display for CSOs to use to:
+  - View the weekly WhenToWork schedule.
+  - Sign in to the CSO Sign In App.
+- Target budget: $500 or less.
+- Restrict the computer to these features to prevent unauthorized use.
+- Investigate whether the device can be wall-mounted.
+3. Other Notes
+- New emails will be sent to schedule access on WhenToWork.
+- Hours must be manually logged on the schedule under the label “PD: IT.”
+- Review the Mercury demonstration video.
+4. Metrics and Data Tracking
+Use a Google Sheet or another suitable database to track 11-54 request information, statuses, and performance metrics.
+Metrics to Track
+- Number of completed requests.
+- Response time.
+- Number of incoming calls.
+- Number of requests that were not completed.
+The system should preserve the exact information needed for CSO operations, reporting, and potential billing or service records.
+5. Implementation Questions
+- What verification method should be used for students, family members, authorized individuals, roommates, and sublessees?
+- Is single sign-on (SSO) available or required for users?
+- How can the system verify that a user has graduate student status?
+- What functionality is needed to add a family member or authorized individual to a request?
+- What exact information must users submit for CSOs to verify residency?
+- If a mobile app is released, who will pay for the Apple Developer Program fee of $99 per year and the Android developer registration fee of $25 one time?
+- Is funding available for mobile app development and ongoing platform costs?
+6. Platform Requirements
+- Android app.
+- Apple/iOS app.
+- Web version.
+- User-facing version with the ability to:
+  - Submit and view requests.
+  - Edit or delete the user’s own reservation or request.
+  - View request status.
+  - View queue position and estimated wait time.
+- CSO-facing version with expanded permissions to:
+  - View all requests.
+  - Create, edit, and delete records.
+  - Manage the live queue.
+  - Update request statuses.
+  - View operational metrics.
+  - Receive notifications when users enter the queue.
