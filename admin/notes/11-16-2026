@@ -1,0 +1,62 @@
+CSO Housing App — Meeting Notes
+Date: November 16
+1. Long-Term Direction
+- Long-term goal: expand the service to all undergraduate housing.
+- Current scope: graduate housing only.
+- Future scope: campus-wide service.
+- The system should be compatible with computers and cell phones.
+- The long-term goal is to transition to an app-only experience.
+2. Information and Tracking Requirements
+The system should track and retain:
+- Name.
+- Housing location.
+- PID.
+- Request status.
+- Service and response information.
+- Number of requests and lockouts.
+- Request time and duration.
+- Housing location statistics.
+Housing should have access to both:
+- The existing Google Form information.
+- Information submitted through the application.
+The user should sign off and verify that they will pay the $25 service fee.
+
+The application should eventually be presented to Housing for review and adoption.
+3. SSO Option
+- Revisit the single sign-on (SSO) option after meeting with Housing.
+4. CSO Workflow and Devices
+Current Device
+- CSOs currently use a company phone.
+Future Device
+- The long-term plan may use a tablet.
+Required CSO Features
+- Receive service requests.
+- View pending requests.
+- Receive pop-up notifications when a request is submitted.
+- Respond to requests.
+- Notify users of their estimated time of arrival or position in line.
+- Provide the estimated number of requests ahead in the queue.
+5. Current Tracking System
+- The current tracking system uses a Google Sheet.
+- HDH has access to the Google Sheet to view request counts and exact request information.
+- During holiday hours, many calls may arrive at the same time, making it difficult or impossible for CSOs to answer every call.
+6. Sgt. King’s Recommendations
+- Continue using a mobile website embedded with the Google Form as an initial approach.
+- Track statistics such as:
+  - Time.
+  - Number of requests.
+  - Housing location.
+  - Quantity of lockouts.
+- Example metric: approximately 40 lockouts in Nuevo East during a holiday period.
+- After confirmation, complete the sign-off and service process through the application.
+- Provide users with the ability to cancel a service request.
+- Account for high staff turnover and frequent personnel changes.
+- Allow CSOs to sign in using their name and badge number.
+7. Front-End Form Categories
+The front end should include a user category selector, such as:
+- Sublessee.
+- Family member.
+- Student.
+Potential email validation rules:
+- Family members or sublessees may use Gmail or another email domain.
+- Students may use a UCSD email address ending in ucsd.edu.
