@@ -1,0 +1,24 @@
+CSO Housing App — Meeting Notes
+Date: November 18, 2026
+1. Email Verification
+- A company email account is needed for sending verification and receipt emails.
+- The team is switching from Resend to Brevo.
+- Brevo provides approximately 9,000 emails per month under the planned setup.
+- The application should send a verification link that routes the user to the appropriate page and authenticates the session automatically.
+- Users should not need to manually enter a verification code.
+Email Usage Estimate
+- Students will generally receive two emails per service request:
+  1. One verification email containing the authentication link.
+  2. One receipt email confirming the request.
+- The average estimate is therefore two emails per student per request.
+Edge Case
+- The system must support students who need to use the service more than once per day.
+- Request and email limits should not incorrectly prevent a legitimate student from submitting another request when needed.
+2. Development Progress
+- Figma was used to create front-end prototypes for both:
+  - Mobile application layouts.
+  - Web application layouts.
+- The resident request page should prefill available user information to reduce repeated data entry.
+3. CSO Dashboard and Sessions
+- The verified session should remain active until the user explicitly clicks the Log out button.
+- The CSO dashboard should preserve the authenticated session while the user is working.
